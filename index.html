@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Olya Falina — Yoga Teacher &amp; Wellness Coach</title>
+<meta name="description" content="Personalized yoga and wellness coaching with Olya Falina. Private sessions and small groups. Every body is welcome — every practice begins exactly where you are.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest:#24402F;
+    --forest-deep:#162A1E;
+    --cream:#F5EFE2;
+    --cream-warm:#EEE3CB;
+    --gold:#B8863B;
+    --gold-light:#D9B876;
+    --ink:#2A2A22;
+    --ink-soft:#57584C;
+    --max-w: 1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Jost', sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    color:var(--forest);
+    margin:0;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--max-w); margin:0 auto; padding:0 28px;}
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:.22em;
+    font-size:.72rem;
+    color:var(--gold);
+    font-weight:600;
+  }
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(245,239,226,.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(36,64,47,.12);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 28px; max-width:var(--max-w); margin:0 auto;
+  }
+  .brand{display:flex; align-items:center; gap:12px;}
+  .brand-name{font-family:'Fraunces',serif; font-size:1.15rem; letter-spacing:.04em; color:var(--forest);}
+  .brand-name span{display:block; font-family:'Jost',sans-serif; font-size:.62rem; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); font-weight:500;}
+  .logo-mark{width:42px; height:42px; flex-shrink:0;}
+  nav.links{display:flex; gap:30px; align-items:center;}
+  nav.links a{
+    font-size:.85rem; letter-spacing:.03em; text-decoration:none; color:var(--ink);
+    position:relative; padding:4px 0;
+  }
+  nav.links a:hover{color:var(--forest);}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--forest); color:var(--cream);
+    padding:12px 26px; border-radius:999px;
+    text-decoration:none; font-size:.85rem; letter-spacing:.03em;
+    border:1px solid var(--forest);
+    transition:background .25s ease, color .25s ease, transform .2s ease;
+    cursor:pointer;
+  }
+  .btn:hover{background:var(--forest-deep); transform:translateY(-1px);}
+  .btn.outline{
+    background:transparent; color:var(--forest); border:1px solid var(--forest);
+  }
+  .btn.outline:hover{background:var(--forest); color:var(--cream);}
+  .navcta{padding:14px 46px;}
+  nav.links a.navcta{color:var(--cream);}
+  nav.links a.navcta:hover{color:var(--cream);}
+  .menu-toggle{display:none; background:none; border:none; cursor:pointer; padding:6px;}
+  .menu-toggle span{display:block; width:24px; height:2px; background:var(--forest); margin:5px 0;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative; overflow:hidden;
+  }
+  .hero-grid{
+    max-width:var(--max-w); margin:0 auto; padding:64px 28px 80px;
+    display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center;
+  }
+  .hero-copy .eyebrow{margin-bottom:18px; display:block;}
+  .hero h1{
+    font-size:clamp(2.3rem, 4.2vw, 3.4rem);
+    line-height:1.12;
+    letter-spacing:-.01em;
+  }
+  .hero h1 em{
+    font-style:italic; color:var(--gold); font-weight:500;
+  }
+  .hero p.lede{
+    margin:22px 0 30px;
+    font-size:1.08rem;
+    color:var(--ink-soft);
+    max-width:46ch;
+  }
+  .hero-actions{display:flex; gap:16px; flex-wrap:wrap;}
+  .hero-figure{
+    position:relative;
+  }
+  .hero-figure .frame{
+    position:relative;
+    border-radius:8px 120px 8px 8px;
+    overflow:hidden;
+    box-shadow:0 30px 60px -25px rgba(22,42,30,.45);
+    border:1px solid rgba(36,64,47,.15);
+  }
+  .hero-figure img{width:100%; height:auto; display:block;}
+  .hero-figure .ring{
+    position:absolute; z-index:-1;
+    border:1px solid var(--gold-light);
+    border-radius:50%;
+  }
+  .ring-1{width:220px; height:220px; top:-40px; right:-50px;}
+  .ring-2{width:120px; height:120px; bottom:-30px; left:-40px; border-color:var(--forest);}
+
+  /* ---------- INTRO ---------- */
+  .intro{padding:10px 0 70px;}
+  .intro-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start;
+  }
+  .intro blockquote{
+    font-family:'Fraunces', serif; font-style:italic; font-weight:400;
+    font-size:1.3rem; color:var(--forest); margin:0; line-height:1.5;
+  }
+  .intro-body p{color:var(--ink-soft); margin:0 0 16px;}
+  .rule{
+    height:1px; background:linear-gradient(to right, var(--gold), transparent);
+    width:80px; margin:0 0 20px;
+  }
+
+  /* ---------- BENEFITS ---------- */
+  .benefits{background:var(--forest); color:var(--cream); padding:80px 0;}
+  .benefits h2{color:var(--cream); font-size:2rem; margin-bottom:8px;}
+  .benefits .eyebrow{color:var(--gold-light);}
+  .benefits-grid{
+    margin-top:40px;
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:1px;
+    background:rgba(245,239,226,.15);
+    border:1px solid rgba(245,239,226,.15);
+  }
+  .benefit-card{
+    background:var(--forest); padding:32px 28px;
+    display:flex; flex-direction:column; gap:14px;
+  }
+  .benefit-card .leaf{width:26px; height:26px; color:var(--gold-light);}
+  .benefit-card h3{color:var(--cream); font-size:1.05rem; font-weight:500;}
+  .benefit-card p{color:rgba(245,239,226,.72); font-size:.92rem; margin:0;}
+
+  /* ---------- BREATH SIGNATURE ---------- */
+  .breathe{
+    padding:90px 0;
+    display:flex; flex-direction:column; align-items:center; text-align:center;
+    gap:22px;
+  }
+  .breathe .eyebrow{margin-bottom:2px;}
+  .breathe h2{font-size:1.9rem; max-width:26ch;}
+  .breath-circle-wrap{position:relative; width:220px; height:220px; margin:20px 0;}
+  .breath-ring{
+    position:absolute; inset:0; border-radius:50%;
+    border:1px solid var(--gold-light);
+  }
+  .breath-ring.r2{inset:18px; border-color:rgba(184,134,59,.5);}
+  .breath-core{
+    position:absolute; inset:56px; border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, var(--gold-light), var(--forest) 78%);
+    animation:breathe 8s ease-in-out infinite;
+    box-shadow:0 10px 30px rgba(36,64,47,.35);
+  }
+  @keyframes breathe{
+    0%,100%{transform:scale(.86);}
+    50%{transform:scale(1.14);}
+  }
+  .breath-label{
+    position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+    color:var(--cream); font-family:'Fraunces',serif; font-style:italic; font-size:1rem;
+    letter-spacing:.02em;
+  }
+  .breathe p.note{color:var(--ink-soft); max-width:42ch; font-size:.95rem;}
+  @media (prefers-reduced-motion: reduce){
+    .breath-core{animation:none;}
+  }
+
+  /* ---------- SESSIONS ---------- */
+  .sessions{background:var(--cream-warm); padding:80px 0;}
+  .sessions-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:40px;
+  }
+  .session-card{
+    background:var(--cream); border:1px solid rgba(36,64,47,.14);
+    border-radius:6px; padding:34px 28px;
+  }
+  .session-card .num{
+    font-family:'Fraunces',serif; font-style:italic; color:var(--gold); font-size:.95rem;
+  }
+  .session-card h3{margin:10px 0 12px; font-size:1.2rem;}
+  .session-card p{color:var(--ink-soft); font-size:.93rem; margin:0;}
+  .tagline{
+    text-align:center; margin-top:56px; font-family:'Fraunces',serif; font-style:italic;
+    color:var(--forest); font-size:1.3rem; line-height:1.6;
+  }
+  .tagline strong{color:var(--gold); font-weight:500; font-style:normal;}
+
+  /* ---------- OFFER BANNER ---------- */
+  .offer{
+    background:var(--forest-deep); color:var(--cream);
+    padding:34px 0; border-top:1px solid var(--gold); border-bottom:1px solid var(--gold);
+  }
+  .offer .wrap{
+    display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;
+  }
+  .offer-text{display:flex; align-items:center; gap:18px;}
+  .offer-text svg{flex-shrink:0;}
+  .offer-text h3{color:var(--cream); font-size:1.15rem; margin:0 0 4px;}
+  .offer-text p{margin:0; color:rgba(245,239,226,.75); font-size:.92rem;}
+  .offer-text strong{color:var(--gold-light);}
+
+  /* ---------- CONTACT ---------- */
+  .contact{padding:90px 0 80px;}
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:60px;}
+  .contact h2{font-size:2rem; margin-bottom:16px;}
+  .contact p.lede{color:var(--ink-soft); max-width:44ch; margin-bottom:28px;}
+  .contact-links{display:flex; flex-direction:column; gap:16px;}
+  .contact-links a{
+    display:flex; align-items:center; gap:14px; text-decoration:none; color:var(--ink);
+    font-size:1rem; padding:6px 0;
+  }
+  .contact-links svg{color:var(--gold); flex-shrink:0;}
+  .contact-links a:hover{color:var(--forest);}
+
+  form.reach{
+    background:var(--cream-warm); border:1px solid rgba(36,64,47,.14);
+    border-radius:8px; padding:32px; display:flex; flex-direction:column; gap:16px;
+  }
+  form.reach label{font-size:.8rem; letter-spacing:.03em; color:var(--ink-soft); margin-bottom:6px; display:block;}
+  form.reach input, form.reach textarea{
+    width:100%; padding:12px 14px; border:1px solid rgba(36,64,47,.25);
+    border-radius:6px; font-family:'Jost',sans-serif; font-size:.95rem; background:var(--cream);
+    color:var(--ink);
+  }
+  form.reach input:focus, form.reach textarea:focus{
+    outline:2px solid var(--gold); outline-offset:1px; border-color:var(--gold);
+  }
+  form.reach textarea{resize:vertical; min-height:100px;}
+  form.reach button{align-self:flex-start;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--forest); color:rgba(245,239,226,.75); padding:40px 0;}
+  .footer-grid{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
+  footer .brand-name{color:var(--cream);}
+  footer .brand-name span{color:var(--gold-light);}
+  .footer-social{display:flex; gap:18px;}
+  .footer-social a{color:rgba(245,239,226,.75); text-decoration:none; font-size:.85rem;}
+  .footer-social a:hover{color:var(--gold-light);}
+  .footer-note{font-size:.78rem; color:rgba(245,239,226,.5); margin-top:18px; text-align:center;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 900px){
+    .hero-grid{grid-template-columns:1fr; padding-top:40px;}
+    .hero-figure{order:-1; max-width:340px; margin:0 auto;}
+    .intro-grid{grid-template-columns:1fr; gap:30px;}
+    .benefits-grid{grid-template-columns:1fr;}
+    .sessions-grid{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
+    nav.links{display:none;}
+    .menu-toggle{display:block;}
+  }
+  @media (max-width:900px){
+    nav.links.open{
+      display:flex; position:absolute; top:100%; left:0; right:0;
+      background:var(--cream); flex-direction:column; padding:20px 28px; gap:18px;
+      border-bottom:1px solid rgba(36,64,47,.12);
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+      <svg class="logo-mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="#24402F"/>
+        <g stroke="#D9B876" stroke-width="2" fill="none" stroke-linecap="round">
+          <path d="M50 28c0 10-8 14-8 22 0 6 4 10 8 10s8-4 8-10c0-8-8-12-8-22z"/>
+          <path d="M50 28c0 10 8 14 8 22"/>
+          <circle cx="32" cy="56" r="9"/>
+          <circle cx="68" cy="56" r="9"/>
+          <path d="M50 60v14"/>
+        </g>
+      </svg>
+      <div class="brand-name">Olya Falina<span>Yoga &amp; Wellness</span></div>
+    </div>
+    <nav class="links" id="navLinks">
+      <a href="#about">Approach</a>
+      <a href="#sessions">Sessions</a>
+      <a href="#offer">Offer</a>
+      <a href="#contact" class="btn navcta" style="padding: 4px 12px;">Book a session</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Personalized Yoga &amp; Wellness Coaching</span>
+      <h1>Move with ease.<br>Breathe with <em>confidence</em>.<br>Live with joy.</h1>
+      <p class="lede">Yoga isn't about how flexible or strong you are. It's about learning to breathe, move with awareness, and take kind care of your body and mind — whatever your starting point.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn">Book your first session</a>
+        <a href="#about" class="btn outline">Learn how it works</a>
+      </div>
+    </div>
+    <div class="hero-figure">
+      <div class="ring ring-1"></div>
+      <div class="ring ring-2"></div>
+      <div class="frame">
+        <img src="images/olya-photo-crop.png" alt="Olya Falina, yoga teacher and wellness coach, sitting calmly on a wooden bench">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="intro" id="about">
+  <div class="wrap intro-grid">
+    <div>
+      <div class="rule"></div>
+      <blockquote>"Every practice is adapted to your individual needs, abilities, and comfort. Whether you've practiced for years or never tried yoga before, you are welcome here."</blockquote>
+    </div>
+    <div class="intro-body">
+      <p>Sessions are built around you, not the other way around. We work at the pace your body asks for, using breath, gentle movement, and honest attention to how you actually feel that day.</p>
+      <p>There's no competition here, and nothing to prove. Only an opportunity to care for yourself — with patience, respect, and compassion, one session at a time.</p>
+    </div>
+  </div>
+</section>
+
+<section class="benefits">
+  <div class="wrap">
+    <span class="eyebrow">Together, we can gently</span>
+    <h2>Small, steady changes that add up</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <svg class="leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20c8-1 14-7 15-15-8 1-14 7-15 15z"/><path d="M6 18c3-4 6-7 11-11"/></svg>
+        <h3>Mobility &amp; balance</h3>
+        <p>Improve how your body moves through everyday life, not just on the mat.</p>
+      </div>
+      <div class="benefit-card">
+        <svg class="leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20c8-1 14-7 15-15-8 1-14 7-15 15z"/><path d="M6 18c3-4 6-7 11-11"/></svg>
+        <h3>Release tension</h3>
+        <p>Let go of everyday aches held in the neck, shoulders, and lower back.</p>
+      </div>
+      <div class="benefit-card">
+        <svg class="leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20c8-1 14-7 15-15-8 1-14 7-15 15z"/><path d="M6 18c3-4 6-7 11-11"/></svg>
+        <h3>Healthy posture</h3>
+        <p>Support comfortable, sustainable movement in your day-to-day routine.</p>
+      </div>
+      <div class="benefit-card">
+        <svg class="leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20c8-1 14-7 15-15-8 1-14 7-15 15z"/><path d="M6 18c3-4 6-7 11-11"/></svg>
+        <h3>Simple breathing</h3>
+        <p>Learn practices you can use anywhere to reduce everyday stress.</p>
+      </div>
+      <div class="benefit-card">
+        <svg class="leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20c8-1 14-7 15-15-8 1-14 7-15 15z"/><path d="M6 18c3-4 6-7 11-11"/></svg>
+        <h3>Relaxation &amp; sleep</h3>
+        <p>Wind down more easily and rest with a calmer nervous system.</p>
+      </div>
+      <div class="benefit-card">
+        <svg class="leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20c8-1 14-7 15-15-8 1-14 7-15 15z"/><path d="M6 18c3-4 6-7 11-11"/></svg>
+        <h3>Long-term habits</h3>
+        <p>Build routines that support your well-being well beyond the session.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sessions" id="sessions">
+  <div class="wrap">
+    <span class="eyebrow">Ways to work together</span>
+    <h2>Private sessions, small groups, personalized support</h2>
+    <div class="sessions-grid">
+      <div class="session-card">
+        <span class="num">One on one</span>
+        <h3>Private sessions</h3>
+        <p>Fully personalized to your body, your goals, and your pace — in person or online.</p>
+      </div>
+      <div class="session-card">
+        <span class="num">Together</span>
+        <h3>Small groups</h3>
+        <p>A calm, supportive setting to practice alongside a few others, with individual attention.</p>
+      </div>
+      <div class="session-card">
+        <span class="num">Ongoing</span>
+        <h3>Wellness coaching</h3>
+        <p>Beyond the mat: guidance on breathing, rest, and habits that support long-term well-being.</p>
+      </div>
+    </div>
+    <p class="tagline">Every body is <strong>welcome</strong>.<br>Every practice begins exactly where you are.</p>
+  </div>
+</section>
+
+<section class="offer" id="offer">
+  <div class="wrap">
+    <div class="offer-text">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#D9B876" stroke-width="1.6"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M3 12h18"/><path d="M12 8v13"/><path d="M12 8c-1.5-4-6-4-6 0s4.5 0 6 0z"/><path d="M12 8c1.5-4 6-4 6 0s-4.5 0-6 0z"/></svg>
+      <div>
+        <h3>New here? Get <strong>50% off</strong> your first session.</h3>
+        <p>Mention this website when you book, in person or online.</p>
+      </div>
+    </div>
+    <a href="#contact" class="btn outline" style="color:var(--cream); border-color:var(--gold-light);">Claim your first session</a>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow">Get in touch</span>
+      <h2>Let's find the right first step for you</h2>
+      <p class="lede">Send a message, call, or reach out on Instagram — whichever feels easiest. I'll help you figure out what kind of session fits where you are right now.</p>
+      <div class="contact-links">
+        <a href="tel:+19292498940">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 2.9a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.9.6a2 2 0 0 1 1.7 2z"/></svg>
+          (929) 249-8940
+        </a>
+        <a href="https://instagram.com/olyafalina_" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          @olyafalina_
+        </a>
+        <a href="mailto:falinaols@gmail.com ">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          falinaols@gmail.com 
+        </a>
+      </div>
+    </div>
+    <form class="reach" action="https://formspree.io/f/mrewndaw" method="POST">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="message">What brings you to yoga right now?</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit" class="btn">Send message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="brand-name">Olya Falina<span>Yoga Teacher &amp; Wellness Coach</span></div>
+      <div class="footer-social">
+        <a href="tel:+19292498940">(929) 249-8940</a>
+        <a href="https://instagram.com/olyafalina_" target="_blank" rel="noopener">@olyafalina_</a>
+      </div>
+    </div>
+    <p class="footer-note">© <span id="year"></span> Olya Falina. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  const label = document.getElementById('breathLabel');
+  function cycleBreath(){
+    label.textContent = 'Breathe in';
+    setTimeout(() => { label.textContent = 'Breathe out'; }, 4000);
+  }
+  cycleBreath();
+  setInterval(cycleBreath, 8000);
+</script>
+
+</body>
+</html>
