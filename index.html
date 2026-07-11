@@ -236,6 +236,22 @@
         width: 100%;
         height: auto;
         display: block;
+        /* Fade the photo to transparent on the left edge and along the bottom,
+           so it blends into the page background instead of a hard edge. */
+        -webkit-mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            black 40%
+          ),
+          linear-gradient(to bottom, black 62%, transparent 100%);
+        -webkit-mask-composite: source-in, source-in;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: 100% 100%;
+        mask-image: linear-gradient(to right, transparent 0%, black 40%),
+          linear-gradient(to bottom, black 62%, transparent 100%);
+        mask-composite: intersect;
+        mask-repeat: no-repeat;
+        mask-size: 100% 100%;
       }
       .hero-figure .ring {
         position: absolute;
@@ -725,7 +741,7 @@
           <div class="ring ring-2"></div>
           <div class="frame">
             <img
-              src="images/olya-photo-crop.JPG"
+              src="images/olya-photo-crop.webp"
               alt="Olya Falina, yoga teacher and wellness coach, sitting calmly on a wooden bench"
             />
           </div>
